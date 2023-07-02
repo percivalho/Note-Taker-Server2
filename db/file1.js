@@ -1,9 +1,13 @@
 var mysql = require('mysql2');
 var fs = require('fs');
+var path = require('path');  // Import the path module
 
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-fs.readFile('schema.sql', 'utf8', function(err, data) {
+// Use path.join to create a path that's relative to the current script file
+var sqlFilePath = path.join(__dirname, 'schema.sql');
+
+fs.readFile(sqlFilePath, 'utf8', function(err, data) {
     if (err) throw err;
     console.log('Loaded SQL file');
 
