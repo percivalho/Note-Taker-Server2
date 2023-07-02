@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Grocery Shopping",
+    "text": "Buy milk, eggs, bread, fruits and vegetables from the supermarket.",
+    "id": "1"
+  },
+  {
+    "title": "Car Maintenance",
+    "text": "Take the car to the mechanic for MOT.",
+    "id": "2"
+  },
+  {
+    "title": "Clean Garage",
+    "text": "Clean out and organize the garage, dispose of any unnecessary items.\n",
+    "id": "3"
+  },
+  {
+    "title": "Laundry",
+    "text": "Wash, dry and fold the laundry.\n",
+    "id": "5"
+  },
+  {
+    "title": "Pay Bills",
+    "text": "Pay the electricity, water, and internet bills for this month.\nalso need council tax!",
+    "id": "6"
+  },
+  {
+    "title": "Garden Work",
+    "text": "Mow the lawn, water the plants, and remove any weeds from the garden.",
+    "id": "7"
+  },
+  {
+    "title": "New notes10",
+    "text": "create new notes10",
+    "id": "2424"
+  },
+  {
+    "title": "ABC",
+    "text": "is it very simple?"
+  }
+]
