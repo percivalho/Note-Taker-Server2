@@ -7,7 +7,7 @@ const mysql = require('mysql2');
 
 
 // Connect to database
-const db = mysql.createConnection(
+/*const db = mysql.createConnection(
   {
   host: 'localhost',
   // MySQL username,
@@ -17,7 +17,40 @@ const db = mysql.createConnection(
   database: 'note_db'
   },
   console.log(`Connected to the notes_db database.`)
-);  
+);*/
+
+//const mysql = require('mysql');
+const url = require('url');
+
+let db;
+
+if (process.env.JAWSDB_URL) {
+  // Heroku deployment
+  const connectionURL = url.parse(process.env.JAWSDB_URL);
+  const connectionAuth = connectionURL.auth.split(':');
+
+  db = mysql.createConnection({
+    host: connectionURL.hostname,
+    user: connectionAuth[0],
+    password: connectionAuth[1],
+    database: connectionURL.path.substr(1)
+  });
+} else {
+  // local host
+  db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'note_db'
+  });
+}
+
+db.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected to the database.");
+});
+
+
 
 // API!
 // GET Route for retrieving all the notes
